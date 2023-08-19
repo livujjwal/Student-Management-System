@@ -11,11 +11,11 @@
     <h1 id="heading">Student Management System</h1>
     <!-- form  -->
     <form id="studentForm">
-      <input type="text" id="name" name="name" placeholder="Name" />
-      <input type="email" id="email" name="email" placeholder="Email" />
-      <input type="text" id="grade" name="grade" placeholder="GPA" />
-      <input type="number" id="age" name="age" placeholder="Age" />
-      <input type="text" id="degree" name="degree" placeholder="Degree" />
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="grade" placeholder="GPA" required />
+      <input type="number" name="age" placeholder="Age" required />
+      <input type="text" name="degree" placeholder="Degree" required />
       <br />
       <button id="addBtn" class="add">Add Student</button>
     </form>
@@ -34,6 +34,7 @@
         <td>Age</td>
         <td>GPA</td>
         <td>Degree</td>
+        <td></td>
       </tr>
     </table>
     <script src="./script.js"></script>

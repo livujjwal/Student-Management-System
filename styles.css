@@ -36,21 +36,22 @@
   width: 500px;
   padding: 10px;
   align-self: center;
-  color: #000;
-  border: none;
 }
 .add {
+  border: none;
+  color: #000;
   background-color: white;
 }
 .edit {
+  color: white;
   background: #111;
+  border: 1px solid white;
 }
 #search {
   margin: 20px -10px 20px 20px;
   width: 95.5%;
   padding: 10px;
   color: rgba(255, 255, 255, 0.5);
-  border: 1px solid white;
 }
 #studentTable {
   width: 97%;
@@ -59,10 +60,31 @@
   text-align: center;
 }
 #studentTable,
-tr,
-td {
+tr:first-child {
   font-size: 20px;
   font-weight: 400;
   border: 1px solid white;
   padding: 10px;
+  text-align: center;
+}
+td {
+  border-left: 1px solid white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+td:last-child {
+  border: none;
+  margin-left: -10px;
+  padding-right: 0px;
+  align-self: center;
+}
+.image {
+  justify-self: left;
+  margin: 0px -10px 0px 20px;
+}
+.image:hover {
+  box-sizing: border-box;
+
+  color: #000;
 }
