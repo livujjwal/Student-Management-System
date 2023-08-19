@@ -52,7 +52,6 @@ btn.addEventListener("click",(event) => {
         newStudent.grade = formElement["grade"].value;
         newStudent.age = formElement["age"].value;
         newStudent.degree = formElement["degree"].value;
-        console.log(formElement["name"].value)
         
         students.push(newStudent);
         i++
@@ -98,6 +97,13 @@ btn.addEventListener("click",(event) => {
     editElement.addEventListener("click", () => {
         btn.className = "edit";
         btn.innerText = "Edit Student";
+
+        formElement["name"].value = nameCell.innerText;
+        formElement["email"].value = emailCell.innerText;
+        formElement["grade"].value = gradeCell.innerText;
+        formElement["age"].value = ageCell.innerText;
+        formElement["degree"].value = degreeCell.innerText;
+
     }) 
     
     editCell.append(editElement, deleteElement) 
