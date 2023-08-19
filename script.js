@@ -30,22 +30,8 @@ const students = [
   const btn = document.getElementById("addBtn");
   
 
-  btn.addEventListener("submit", (event) => {
-         
-    const newStudent = {};
-  event.preventDefault();
- 
-  newStudent.ID = students.length+1;
-  newStudent.name = formElement["name"].value;
-  newStudent.email = formElement["email"].value;
-  newStudent.grade = formElement["grade"].value;
-  newStudent.age = formElement["age"].value;
-  newStudent.degree = formElement["degree"].value;
-  console.log(formElement["name"].value)
-  
-  students.push(newStudent);
-  console.log(newStudent)
-})
+
+console.log(students)
 
 
 index = 0; 
@@ -54,7 +40,23 @@ btn.addEventListener("click",(event) => {
     
     if(index >= students.length )
      {
-      
+        let i = students.length;
+        btn.addEventListener("click", (event) => {
+               
+          const newStudent = {};
+        event.preventDefault();
+       
+        newStudent.ID = i+1;
+        newStudent.name = formElement["name"].value;
+        newStudent.email = formElement["email"].value;
+        newStudent.grade = formElement["grade"].value;
+        newStudent.age = formElement["age"].value;
+        newStudent.degree = formElement["degree"].value;
+        console.log(formElement["name"].value)
+        
+        students.push(newStudent);
+        i++
+      });
     }else
     {
      const tableRow = document.createElement("tr");
@@ -105,3 +107,4 @@ btn.addEventListener("click",(event) => {
      tableElement.appendChild(tableRow)
      index++;}
 });
+
