@@ -26,9 +26,27 @@ const students = [
   ]; 
   const formElement = document.getElementById("studentForm");
 
+  const tableElement = document.getElementById("studentTable");
+  const btn = document.getElementById("addBtn");
+  
 
-const tableElement = document.getElementById("studentTable");
-const btn = document.getElementById("addBtn");
+  btn.addEventListener("submit", (event) => {
+         
+    const newStudent = {};
+  event.preventDefault();
+ 
+  newStudent.ID = students.length+1;
+  newStudent.name = formElement["name"].value;
+  newStudent.email = formElement["email"].value;
+  newStudent.grade = formElement["grade"].value;
+  newStudent.age = formElement["age"].value;
+  newStudent.degree = formElement["degree"].value;
+  console.log(formElement["name"].value)
+  
+  students.push(newStudent);
+  console.log(newStudent)
+})
+
 
 index = 0; 
 btn.addEventListener("click",(event) => {
@@ -36,23 +54,7 @@ btn.addEventListener("click",(event) => {
     
     if(index >= students.length )
      {
-         formElement.addEventListener("submit", (event) => {
-            const newStudent = {};
-            event.preventDefault();
-            
-            students[index]
-           
-            newStudent.ID = index+1;
-            newStudent.name = formElement["name"].value;
-            newStudent.email = formElement["email"].value;
-            newStudent.grade = formElement["grade"].value;
-            newStudent.age = formElement["age"].value;
-            newStudent.degree = formElement["degree"].value;
-            console.log(formElement["name"].value)
-            
-            students.push(newStudent);
-            console.log(newStudent)
-          })
+      
     }else
     {
      const tableRow = document.createElement("tr");
