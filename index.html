@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">Student Management System</h1>
+    <!-- form  -->
+    <form id="studentForm">
+      <input type="text" id="name" name="name" placeholder="Name" />
+      <input type="email" id="email" name="email" placeholder="Email" />
+      <input type="text" id="grade" name="grade" placeholder="GPA" />
+      <input type="number" id="age" name="age" placeholder="Age" />
+      <input type="text" id="degree" name="degree" placeholder="Degree" />
+      <br />
+      <button id="addBtn" class="add">Add Student</button>
+    </form>
+    <!-- search -->
+    <input
+      id="search"
+      name="search"
+      placeholder="Search By Name, email or degree"
+    />
+    <!-- table  -->
+    <table id="studentTable">
+      <tr>
+        <td>ID</td>
+        <td>Student Name</td>
+        <td>Email</td>
+        <td>Age</td>
+        <td>GPA</td>
+        <td>Degree</td>
+      </tr>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
